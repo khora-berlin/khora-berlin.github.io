@@ -1,4 +1,3 @@
-import { Link } from 'gatsby'
 import * as React from 'react'
 import styled from 'styled-components'
 import { ReactFitty } from 'react-fitty'
@@ -9,9 +8,10 @@ const KhoraHeader = styled.header`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 0 0 1em 0;
 `
 
-const KhoraTitle = styled.h1`
+const KhoraTitle = styled.div`
 	font-family: 'ArcadeClassic';
 	width: 50%;
 	margin-bottom: 0;
@@ -29,6 +29,11 @@ const Text = styled(ReactFitty)`
 	line-height: 1em;
 `
 
+const Symbol = styled.div`
+	font-family: 'KhoraSymbols';
+	display: inline;
+`
+
 const SubText = styled(ReactFitty)`
 	letter-spacing: 0.05em;
 	word-spacing: 0.1em;
@@ -39,7 +44,9 @@ const Header = (props: HeaderProps) => {
 	return (
 		<KhoraHeader>
 			<KhoraTitle>
-				<Text>{props.siteTitle}</Text>
+				<Text>
+					KH<Symbol>H</Symbol>RA
+				</Text>
 			</KhoraTitle>
 			<KhoraSubTitle>
 				<SubText>YOUR FAVOURITE FOOD DELIVERY COLLECTIVE</SubText>
