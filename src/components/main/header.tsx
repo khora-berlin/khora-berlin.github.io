@@ -8,7 +8,7 @@ const KhoraHeader = styled.header`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 1em 0 1em 0;
+	padding: 1em 0;
 `
 
 const KhoraTitle = styled.div`
