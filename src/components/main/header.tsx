@@ -17,7 +17,10 @@ const KhoraTitle = styled.div`
 		width: 80%;
 	}
 	@media only screen and (min-width: 600px) {
-		width: 50%;
+		width: 60%;
+	}
+	@media only screen and (min-width: 1200px) {
+		width: 40%;
 	}
 	margin-bottom: 0;
 `
