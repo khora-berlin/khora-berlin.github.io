@@ -8,18 +8,18 @@ const KhoraHeader = styled.header`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 0 0 1em 0;
+	padding: 1em 0 1em 0;
 `
 
 const KhoraTitle = styled.div`
 	font-family: 'ArcadeClassic';
-	width: 50%;
+	@media only screen and (max-width: 600px) {
+		width: 80%;
+	}
+	@media only screen and (min-width: 600px) {
+		width: 50%;
+	}
 	margin-bottom: 0;
-`
-
-const KhoraSubTitle = styled.div`
-	width: 50%;
-	font-family: 'ArcadeClassic';
 `
 
 const Text = styled(ReactFitty)`
@@ -47,10 +47,8 @@ const Header = (props: HeaderProps) => {
 				<Text>
 					KH<Symbol>H</Symbol>RA
 				</Text>
-			</KhoraTitle>
-			<KhoraSubTitle>
 				<SubText>YOUR FAVOURITE FOOD DELIVERY COLLECTIVE</SubText>
-			</KhoraSubTitle>
+			</KhoraTitle>
 		</KhoraHeader>
 	)
 }
