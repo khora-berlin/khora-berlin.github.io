@@ -2,17 +2,14 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { ReactFitty } from 'react-fitty'
 
-const KhoraHeader = styled.header`
-	background: #fc3638;
-	color: white;
+const KhoraHeader = styled.header`	
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 1em 0;
 `
 
-const KhoraTitle = styled.div`
-	font-family: 'ArcadeClassic';
+const KhoraTitle = styled.div`	
 	@media only screen and (max-width: 600px) {
 		width: 80%;
 	}
