@@ -53,18 +53,18 @@ const Header = (props: HeaderProps) => {
 				<Text>
 					KH<Symbol>H</Symbol>RA
 				</Text>
-				<SubText>YOUR FAVOURITE FOOD DELIVERY COLLECTIVE</SubText>
+				<SubText>{props.siteSubTitle}</SubText>
 			</KhoraTitle>
 		</KhoraHeader>
 	);
 };
 
 interface HeaderProps {
-	siteTitle?: string;
+	siteSubTitle?: string;
 }
 
 Header.defaultProps = {
-	siteTitle: ``,
+	siteSubTitle: ``,
 };
 
 export default Header;
