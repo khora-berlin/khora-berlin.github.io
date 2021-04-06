@@ -5,8 +5,8 @@ const KhoraFooter = styled.div`
 	text-align: center;
 	padding: 1em 1em;
 	margin-bottom: 30px;
-	background: white;
-	color: #fc3638;
+	background: var(--main-fg-color);
+	color: var(--main-bg-color);
 `;
 
 export default function Footer() {

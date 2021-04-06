@@ -14,8 +14,8 @@ import GlobalStyle from './global.style';
 import Footer from './main/footer.component';
 
 const SiteContent = styled.div`
-	background: #fc3638;
-	color: white;
+	background: var(--main-bg-color);
+	color: var(--main-fg-color);
 	display: flex;
 	height: 100vh;
 	max-width: 800px;

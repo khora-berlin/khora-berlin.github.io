@@ -12,6 +12,8 @@ const GlobalStyle = createGlobalStyle`
       src: url('${ArcadeClassic}') format('woff2');
   }
   html, body {
+    --main-bg-color: #fc3638;
+    --main-fg-color: white;
     margin: 0;
     padding: 0;
   }
