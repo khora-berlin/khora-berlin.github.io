@@ -16,7 +16,7 @@ const KhoraTitle = styled.div`
 	@media only screen and (max-width: 500px) {
 		width: 85%;
 	}
-	@media only screen and (min-width: 600px) {
+	@media only screen and (min-width: 500px) {
 		width: 80%;
 	}
 	@media only screen and (min-width: 600px) {
