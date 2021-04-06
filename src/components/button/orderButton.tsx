@@ -1,10 +1,10 @@
-import * as React from "react"
-import Button from "./button"
+import * as React from 'react';
+import Button from './button';
 
 const OrderButton = () => (
-  <>
-    <Button title="Order now" invert />
-  </>
-)
+	<>
+		<Button title="Order now" invert />
+	</>
+);
 
-export default OrderButton
+export default OrderButton;
