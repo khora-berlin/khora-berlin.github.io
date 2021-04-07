@@ -8,10 +8,10 @@
 import * as React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
-import Header from './main/header.component';
+import Header from './main/header';
 import styled from 'styled-components';
-import GlobalStyle from './global.style';
-import Footer from './main/footer.component';
+import GlobalStyle from './global';
+import Footer from './main/footer';
 
 const SiteContent = styled.div`
 	background: var(--main-bg-color);
@@ -24,12 +24,14 @@ const SiteContent = styled.div`
 	justify-content: space-between;
 `;
 
-const Main = styled.div`
+const Main = styled.main`
 	height: 100%;
-	text-align: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	text-align: center;
+	letter-spacing: 0.1em;
+	line-height: 1.6em;
 `;
 
 const Layout = (props: LayoutProps) => (

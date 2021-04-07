@@ -18,10 +18,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   html {
-    font-family: 'ArcadeClassic';
-    letter-spacing: 0.1em;
-    text-indent: -0.5em;
-    line-height: 1.6em; 
+    font-family: 'ArcadeClassic';    
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
   }

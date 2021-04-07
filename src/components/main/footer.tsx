@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-const KhoraFooter = styled.div`
+const KhoraFooter = styled.footer`
 	text-align: center;
 	padding: 1em 1em;
 	margin-bottom: 30px;
