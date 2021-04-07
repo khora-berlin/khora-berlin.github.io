@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import ArcadeClassic from '../fonts/ArcadeClassic.woff2';
-import KhoraSymbols from '../fonts/KhoraSymbols.woff2';
+import ArcadeClassic from '../../fonts/ArcadeClassic.woff2';
+import KhoraSymbols from '../../fonts/KhoraSymbols.woff2';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {

@@ -8,10 +8,10 @@
 import * as React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
-import Header from './main/header';
+import Header from './header';
 import styled from 'styled-components';
 import GlobalStyle from './global';
-import Footer from './main/footer';
+import Footer from './footer';
 
 const SiteContent = styled.div`
 	background: var(--main-bg-color);
