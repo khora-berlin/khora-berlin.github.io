@@ -41,6 +41,7 @@ const Layout = (props: LayoutProps) => (
 				site {
 					siteMetadata {
 						title
+						subTitle
 					}
 				}
 			}
@@ -49,7 +50,7 @@ const Layout = (props: LayoutProps) => (
 			<>
 				<GlobalStyle />
 				<SiteContent>
-					<Header siteTitle={data.site.siteMetadata.title} />
+					<Header siteSubTitle={data.site.siteMetadata.subTitle} />
 					<Main>{props.children}</Main>
 					<Footer />
 				</SiteContent>
