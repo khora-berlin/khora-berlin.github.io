@@ -40,6 +40,7 @@
     "file-loader": "^6.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
+    "jest-styled-components": "^7.0.3",
     "prettier": "^1.17.1",
     "react-test-renderer": "^16.8.6",
     "ts-jest": "^24.0.2",

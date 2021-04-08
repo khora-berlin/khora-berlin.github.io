@@ -1,24 +1,24 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import GlobalFonts from '../fonts/fonts';
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import * as React from 'react';
+import { Link } from 'gatsby';
+import Layout from '../components/layout/layout';
 
 const IndexPage = () => (
-  <React.Fragment>
-    <GlobalFonts />
-    <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-    </Layout>
-  </React.Fragment>
-)
+	<React.Fragment>
+		<Layout>
+			<article>
+				MO-SO 12-10 PM! <br />
+				ORDER FROM COOPCYCLE - WEB OR APP! <br />
+				FOR QUESTIONS CALL 01759920141
+			</article>
+			<article>
+				BE LAZY, SHOW SOLIDARITY. <br />
+				ORDER WITH US - YOUR FAVOURITE 
+				COURIER COLLECTIVE, KHORA. <br />
+				FROM BERLIN, FOR BERLIN. <br />
+				FAIR AND WORKER OWNED.
+			</article>
+		</Layout>
+	</React.Fragment>
+);
 
-export default IndexPage
+export default IndexPage;
