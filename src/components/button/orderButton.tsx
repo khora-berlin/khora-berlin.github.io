@@ -3,7 +3,7 @@ import Button from './button';
 
 const OrderButton = () => (
 	<>
-		<Button title="Order now" invert />
+		<Button title="Order now" size="lg"/>
 	</>
 );
 

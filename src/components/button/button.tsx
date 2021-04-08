@@ -3,56 +3,102 @@ import styled from 'styled-components';
 
 interface IKhoraButtonProps {
 	invert?: boolean;
+	className: string;
 }
 
-const KhoraButton = styled.button`
+const KhoraButton = styled.button.attrs(props => ({
+	className: props.className,
+}))`
 	font-family: 'ArcadeClassic';
-	font-size: 2em;
+
+	&.lg {
+		@media only screen and (max-width: 500px) {
+			--btn-width: 85%;
+		}
+		@media only screen and (min-width: 500px) {
+			--btn-width: 80%;
+		}
+		@media only screen and (min-width: 600px) {
+			--btn-width: 60%;
+		}
+		@media only screen and (min-width: 800px) {
+			--btn-width: 60%;
+		}
+		@media only screen and (min-width: 1200px) {
+			--btn-width: 40%;
+		}
+		--btn-height: 60px;
+		--btn-font-size: 1.6em;
+	}
+
+	&.sm {
+		@media only screen and (max-width: 500px) {
+			--btn-width: 30%;
+		}
+		@media only screen and (min-width: 500px) {
+			--btn-width: 40%;
+		}
+		@media only screen and (min-width: 600px) {
+			--btn-width: 16%;
+		}
+		@media only screen and (min-width: 800px) {
+			--btn-width: 16%;
+		}
+		@media only screen and (min-width: 1200px) {
+			--btn-width: 15%;
+		}
+		--btn-height: 50px;
+		--btn-font-size: 0.9em;
+	}
+
 	background: ${(props: IKhoraButtonProps) => (props.invert ? `#fc3638` : `white`)};
 	color: ${(props: IKhoraButtonProps) => (props.invert ? `white` : `#fc3638`)};
 	border: none;
 	position: relative;
-	margin: 0 auto;
-	padding: 0 36px;
-	height: 10vh;
-	width: 50vw;
-	min-width: 250px;
+	cursor: pointer;
+	height: var(--btn-height);
+	width: var(--btn-width);
+	font-size: var(--btn-font-size);
+	&:focus {
+		outline: none;
+	}
 	&:before,
 	&:after {
-		/* make two squares (before and after), looking similar to the button */
 		content: '';
 		z-index: 1;
 		position: absolute;
-		top: 2vh;
-		width: 6vh; /* same as height */
-		height: 6vh; /* button_outer_height / sqrt(2) */
-		transform: rotate(225deg) skew(20deg, 20deg); /* rotate left arrow squares 225 deg to point left */
-		-webkit-transform: rotate(225deg) skew(20deg, 20deg);
-		-moz-transform: rotate(225deg) skew(20deg, 20deg);
-		-o-transform: rotate(225deg) skew(20deg, 20deg);
-		-ms-transform: rotate(225deg) skew(20deg, 20deg);
-		background-color: ${(props: IKhoraButtonProps) => (props.invert ? `white` : `#fc3638`)};
-	}
-	&:after {
-		/* align the "after" square to the right */
-		right: -3vh;
+		top: calc(var(--btn-height) / -2);
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-color: transparent ${(props: IKhoraButtonProps) => (props.invert ? `white` : `#fc3638`)}
+			transparent transparent;
 	}
 	&:before {
-		/* bring arrow pointers to front */
-		left: -3vh;
+		border-width: var(--btn-height) 18px var(--btn-height) 0;
+		transform: rotate(180deg);
+		left: -1px;
+	}
+	&:after {
+		border-width: var(--btn-height) 18px var(--btn-height) 0;
+		right: -1px;
 	}
 `;
 
 interface IButtonProps {
 	title: string;
-	size?: string;
+	size?: `sm` | `lg`;
 	invert?: boolean;
 }
 
-const Button = ({ title, size, invert }: IButtonProps) => (
-	<>
-		<KhoraButton invert={invert}>{title}</KhoraButton>
-	</>
-);
+const Button = ({ title, size, invert }: IButtonProps) => {
+	return (
+		<>
+			<KhoraButton invert={invert} className={size}>
+				{title}
+			</KhoraButton>
+		</>
+	);
+};
 
 export default Button;
