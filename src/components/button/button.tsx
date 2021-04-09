@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { mixinMediaQuery } from '../layout/global';
 
 interface IKhoraButtonProps {
 	invert?: boolean;
@@ -9,48 +10,23 @@ interface IKhoraButtonProps {
 const KhoraButton = styled.button.attrs(props => ({
 	className: props.className,
 }))`
-	font-family: 'ArcadeClassic';
 
 	&.lg {
-		@media only screen and (max-width: 500px) {
-			--btn-width: 85%;
-		}
-		@media only screen and (min-width: 500px) {
-			--btn-width: 80%;
-		}
-		@media only screen and (min-width: 600px) {
-			--btn-width: 60%;
-		}
-		@media only screen and (min-width: 800px) {
-			--btn-width: 60%;
-		}
-		@media only screen and (min-width: 1200px) {
-			--btn-width: 40%;
-		}
-		--btn-height: 60px;
-		--btn-font-size: 1.6em;
+		${mixinMediaQuery(`mobile`, `--btn-width: 95%`)}
+		${mixinMediaQuery(`tablet`, `--btn-width: 85%`)}
+		${mixinMediaQuery(`desktop`, `--btn-width: 70%`)}
+		${mixinMediaQuery(`largeDesktop`, `--btn-width: 50%`)}
+		--btn-height: 60px;		
+		--btn-font-size: 1.5em;
 	}
-
 	&.sm {
-		@media only screen and (max-width: 500px) {
-			--btn-width: 30%;
-		}
-		@media only screen and (min-width: 500px) {
-			--btn-width: 40%;
-		}
-		@media only screen and (min-width: 600px) {
-			--btn-width: 16%;
-		}
-		@media only screen and (min-width: 800px) {
-			--btn-width: 16%;
-		}
-		@media only screen and (min-width: 1200px) {
-			--btn-width: 15%;
-		}
-		--btn-height: 50px;
-		--btn-font-size: 0.9em;
+		${mixinMediaQuery(`mobile`, `--btn-width: 120px`)}
+		${mixinMediaQuery(`tablet`, `--btn-width: 120px`)}
+		${mixinMediaQuery(`desktop`, `--btn-width: 130px`)}
+		${mixinMediaQuery(`largeDesktop`, `--btn-width: 140px`)}
+		--btn-height: 50px;		
+		--btn-font-size: 85%;
 	}
-
 	background: ${(props: IKhoraButtonProps) => (props.invert ? `#fc3638` : `white`)};
 	color: ${(props: IKhoraButtonProps) => (props.invert ? `white` : `#fc3638`)};
 	border: none;
@@ -75,12 +51,12 @@ const KhoraButton = styled.button.attrs(props => ({
 			transparent transparent;
 	}
 	&:before {
-		border-width: var(--btn-height) 18px var(--btn-height) 0;
+		border-width: var(--btn-height) 17px var(--btn-height) 0;
 		transform: rotate(180deg);
 		left: -1px;
 	}
 	&:after {
-		border-width: var(--btn-height) 18px var(--btn-height) 0;
+		border-width: var(--btn-height) 17px var(--btn-height) 0;
 		right: -1px;
 	}
 `;

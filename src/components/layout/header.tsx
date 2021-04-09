@@ -10,7 +10,6 @@ const KhoraHeader = styled.header`
 `;
 
 const KhoraTitle = styled.div`
-	font-family: 'ArcadeClassic';
 	@media only screen and (max-width: 500px) {
 		width: 85%;
 	}

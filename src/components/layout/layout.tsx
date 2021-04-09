@@ -17,21 +17,21 @@ const SiteContent = styled.div`
 	background: var(--main-bg-color);
 	color: var(--main-fg-color);
 	display: flex;
-	height: 100vh;
-	max-width: 800px;
-	margin: 0 auto;
 	flex-direction: column;
 	justify-content: space-between;
+	gap: var(--main-gap);
+	min-height: 100vh;
+	max-width: 800px;
+	margin: 0 auto;
 `;
 
 const Main = styled.main`
 	height: 100%;
 	display: flex;
+	flex: 1;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
 	text-align: center;
-	letter-spacing: 0.1em;
-	line-height: 1.6em;
 `;
 
 const Layout = (props: LayoutProps) => (

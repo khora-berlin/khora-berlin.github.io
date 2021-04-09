@@ -1,6 +1,25 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 import ArcadeClassic from '../../fonts/ArcadeClassic.woff2';
 import KhoraSymbols from '../../fonts/KhoraSymbols.woff2';
+
+const breakpoints = {
+	mobile: `400px`,
+	tablet: `786px`,
+	desktop: `992px`,
+	largeDesktop: `1200px`,
+};
+
+export const mixinMediaQuery = (key: string, style: string) => {
+	if (!(key in breakpoints)) {
+		return ``;
+	}
+	let styles = `@media (min-width: ${
+		breakpoints[key as keyof typeof breakpoints]
+	}){${style}}`;
+	return css`
+		${styles}
+	`;
+};
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -11,20 +30,19 @@ const GlobalStyle = createGlobalStyle`
       font-family: 'ArcadeClassic';
       src: url('${ArcadeClassic}') format('woff2');
   }
-  html, body {
+  *{
     --main-bg-color: #fc3638;
     --main-fg-color: white;
-    margin: 0;
-    padding: 0;
-  }
-  html {
-    font-family: 'ArcadeClassic';    
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-  }
-  body {    
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    --main-gap: 4vh;
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'ArcadeClassic';   
+    body{
+      width: 100%;
+      min-height: 100vh;      
+      font-size: 22px;
+    }
   }
   a:link, a:hover, a:visited {
     text-decoration: none;
