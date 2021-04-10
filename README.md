@@ -5,12 +5,12 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's Typescript Jest Starter
+  Khora -Your favourite food delivery collective
 </h1>
 
-Barebones Gatsby starter with Typescript, Jest, and other useful configurations. A [detailed guide](#deploying-your-gatsby-site-to-an-S3-Bucket) on how to deploy your Gatsby site to AWS S3 buckets (manually and automatically) can be found in this readme.
+# Khora Collective website
 
-This starter includes configurations for Typescript, Jest (ts-jest), EditorConfig, ESLint, Prettier, GitHub pull request templates, and even Gitlab-CI. Enjoy!
+Welcome, this is a first draft of the new website for the Khora collective([khora.berlin](https://khora.berlin)).
 
 ## Prerequisites
 
