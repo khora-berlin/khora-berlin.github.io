@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.c1 {
+  margin-bottom: 0;
+}
+
+.c2 {
+  -webkit-letter-spacing: 0.5em;
+  -moz-letter-spacing: 0.5em;
+  -ms-letter-spacing: 0.5em;
+  letter-spacing: 0.5em;
+  direction: rtl;
+  text-indent: -0.5em;
+  line-height: 1em;
+}
+
+.c3 {
+  font-family: 'KhoraSymbols';
+  display: inline;
+}
+
+.c4 {
+  -webkit-letter-spacing: 0.05em;
+  -moz-letter-spacing: 0.05em;
+  -ms-letter-spacing: 0.05em;
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+  font-size: 0.5em;
+}
+
+@media only screen and (max-width:500px) {
+  .c1 {
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width:500px) {
+  .c1 {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width:600px) {
+  .c1 {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width:1200px) {
+  .c1 {
+    width: 40%;
+  }
+}
+
+<header
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="c2"
+      >
+        KH
+        <div
+          className="c3"
+        >
+          H
+        </div>
+        RA
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="c4"
+      >
+        Your favourite food delivery collective
+      </div>
+    </div>
+  </div>
+</header>
+`;

@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { ReactFitty } from 'react-fitty';
 
-const KhoraHeader = styled.header`	
+const KhoraHeader = styled.header`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
