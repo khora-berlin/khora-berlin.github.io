@@ -10,8 +10,8 @@ describe('Header', () => {
 	it('matches snapshot', () => {
 		const { asFragment } = render(
 			<>
-				<GlobalStyle key="one" />
-				<Header key="two" siteSubTitle="Your favourite food delivery collective" />
+				<GlobalStyle />
+				<Header siteSubTitle="Your favourite food delivery collective" />
 			</>
 		);
 		expect(asFragment()).toMatchSnapshot();
