@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches snapshot 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -69,43 +70,36 @@ exports[`Header matches snapshot 1`] = `
 }
 
 <header
-  className="c0"
->
-  <div
-    className="c1"
+    class="c0"
   >
     <div
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
+      class="c1"
     >
       <div
-        className="c2"
+        style="width: 100%;"
       >
-        KH
         <div
-          className="c3"
+          class="c2"
         >
-          H
+          KH
+          <div
+            class="c3"
+          >
+            H
+          </div>
+          RA
         </div>
-        RA
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
-    >
       <div
-        className="c4"
+        style="width: 100%;"
       >
-        Your favourite food delivery collective
+        <div
+          class="c4"
+        >
+          Your favourite food delivery collective
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
+</DocumentFragment>
 `;
