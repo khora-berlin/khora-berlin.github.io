@@ -16,7 +16,7 @@ const createNodeMock = (el: any) => {
 };
 
 describe('Header', () => {
-	it('renders correctly', () => {
+	it('matches snapshot', () => {
 		const tree = renderer
 			.create(
 				<>
@@ -27,6 +27,8 @@ describe('Header', () => {
 			)
 			.toJSON();
 		expect(tree).toMatchSnapshot();
+	});
+	it('contains correct siteSubTitle', () => {
 		render(<Header key="two" siteSubTitle="Your favourite food delivery collective" />);
 		const text = screen.getByText('Your favourite food delivery collective');
 		expect(text).toBeInTheDocument();
