@@ -10,12 +10,11 @@ const breakpoints = {
 };
 
 export const mixinMediaQuery = (key: string, style: string) => {
+	console.log('mixin: ', key);
 	if (!(key in breakpoints)) {
 		return ``;
 	}
-	let styles = `@media (min-width: ${
-		breakpoints[key as keyof typeof breakpoints]
-	}){${style}}`;
+	let styles = `@media (min-width: ${breakpoints[key as keyof typeof breakpoints]}){${style}}`;
 	return css`
 		${styles}
 	`;

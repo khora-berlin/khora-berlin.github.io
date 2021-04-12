@@ -28,6 +28,12 @@ module.exports = {
 				icon: `src/images/heart.png`, // This path is relative to the root of the site.
 			},
 		},
+		{
+			resolve: `gatsby-source-instagram`,
+			options: {
+				username: `18189163897`,
+			},
+		},
 		`gatsby-plugin-typescript`,
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline
