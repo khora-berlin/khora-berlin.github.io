@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/layout/layout';
 import OrderButton from '../components/button/orderButton';
+import Gallery from '../components/instagram/gallery';
 
 const IndexPage = () => (
 	<React.Fragment>
@@ -14,6 +15,7 @@ const IndexPage = () => (
 				ORDER FROM COOPCYCLE - WEB OR APP! <br />
 				FOR QUESTIONS CALL 01759920141
 			</article>
+			<Gallery />
 			<article>
 				BE LAZY, SHOW SOLIDARITY. <br />
 				ORDER WITH US - YOUR FAVOURITE COURIER COLLECTIVE, KHORA. <br />
