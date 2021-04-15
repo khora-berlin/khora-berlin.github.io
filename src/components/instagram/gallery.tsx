@@ -3,21 +3,28 @@
  */
 
 import * as React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql, useStaticQuery } from 'gatsby';
 
 const Gallery = (props: GalleryProps) => (
 	<StaticQuery
 		query={graphql`
-			query {
-				allInstaNode(limit: 10) {
-					nodes {
-						id
-						username
-						caption
-						localFile {
-							childImageSharp {
-								fluid(maxWidth: 120, maxHeight: 120) {
-									...GatsbyImageSharpFluid_withWebp
+			query InstaPosts {
+				allInstaNode(limit: 6, sort: { fields: timestamp, order: DESC }) {
+					edges {
+						node {
+							id
+							likes
+							comments
+							mediaType
+							preview
+							original
+							timestamp
+							caption
+							localFile {
+								childImageSharp {
+									fixed(width: 280, height: 280) {
+										...GatsbyImageSharpFixed
+									}
 								}
 							}
 						}
