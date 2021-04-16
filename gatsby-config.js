@@ -4,6 +4,7 @@ module.exports = {
 		subTitle: `Your favourite food delivery collective`,
 		description: `Khora | Your favourite food delivery collective | Order food online`,
 		author: `@denningk`,
+		orderLink: `https://khora.berlin/de/`,
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,

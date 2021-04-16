@@ -1,10 +1,23 @@
 import * as React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import Button from './button';
 
-const OrderButton = () => (
-	<>
-		<Button title="Order now" size="lg"/>
-	</>
-);
+export default function OrderButton() {
+	const data = useStaticQuery(graphql`
+		query HeaderQuery {
+			site {
+				siteMetadata {
+					orderLink
+				}
+			}
+		}
+	`);
 
-export default OrderButton;
+	return (
+		<>
+			<a href={data.site.siteMetadata.orderLink}>
+				<Button title="Order now" size="lg" />
+			</a>
+		</>
+	);
+}
