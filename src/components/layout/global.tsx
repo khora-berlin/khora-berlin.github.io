@@ -1,6 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components';
 import ArcadeClassic from '../../fonts/ArcadeClassic.woff2';
 import KhoraSymbols from '../../fonts/KhoraSymbols.woff2';
+import OpenSansRegular from '../../fonts/OpenSans-Semibold.woff2';
 
 const breakpoints = {
 	mobile: `400px`,
@@ -26,6 +27,10 @@ const GlobalStyle = createGlobalStyle`
       src: url('${KhoraSymbols}') format('woff2');
   }
   @font-face {
+      font-family: 'OpenSans';
+      src: url('${OpenSansRegular}') format('woff2');
+  }
+  @font-face {
       font-family: 'ArcadeClassic';
       src: url('${ArcadeClassic}') format('woff2');
   }
@@ -36,11 +41,12 @@ const GlobalStyle = createGlobalStyle`
     margin:0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'ArcadeClassic';   
+      
     body{
       width: 100%;
       min-height: 100vh;      
-      font-size: 22px;
+      font-family: 'OpenSans';
+      font-size: 15px;
     }
   }
   a:link, a:hover, a:visited {
@@ -49,6 +55,9 @@ const GlobalStyle = createGlobalStyle`
   }
   a:hover{
     text-decoration: underline;
+  }
+  article{    
+    margin: 20px 0;
   }
 `;
 export default GlobalStyle;

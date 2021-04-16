@@ -7,24 +7,44 @@ interface IKhoraButtonProps {
 	className: string;
 }
 
-const KhoraButton = styled.button.attrs(props => ({
-	className: props.className,
-}))`
-
+const KhoraButton = styled.button`
 	&.lg {
+		font-family: 'ArcadeClassic';
 		${mixinMediaQuery(`mobile`, `--btn-width: 95%`)}
 		${mixinMediaQuery(`tablet`, `--btn-width: 85%`)}
 		${mixinMediaQuery(`desktop`, `--btn-width: 70%`)}
 		${mixinMediaQuery(`largeDesktop`, `--btn-width: 50%`)}
-		--btn-height: 60px;		
+		--btn-height: 60px;
 		--btn-font-size: 1.5em;
+		&:before,
+		&:after {
+			content: '';
+			z-index: 1;
+			position: absolute;
+			top: calc(var(--btn-height) / -2);
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-color: transparent
+				${(props: IKhoraButtonProps) => (props.invert ? `white` : `#fc3638`)} transparent
+				transparent;
+		}
+		&:before {
+			border-width: var(--btn-height) 17px var(--btn-height) 0;
+			transform: rotate(180deg);
+			left: -1px;
+		}
+		&:after {
+			border-width: var(--btn-height) 17px var(--btn-height) 0;
+			right: -1px;
+		}
 	}
 	&.sm {
 		${mixinMediaQuery(`mobile`, `--btn-width: 120px`)}
 		${mixinMediaQuery(`tablet`, `--btn-width: 120px`)}
 		${mixinMediaQuery(`desktop`, `--btn-width: 130px`)}
 		${mixinMediaQuery(`largeDesktop`, `--btn-width: 140px`)}
-		--btn-height: 50px;		
+		--btn-height: 50px;
 		--btn-font-size: 85%;
 	}
 	background: ${(props: IKhoraButtonProps) => (props.invert ? `#fc3638` : `white`)};
@@ -37,27 +57,6 @@ const KhoraButton = styled.button.attrs(props => ({
 	font-size: var(--btn-font-size);
 	&:focus {
 		outline: none;
-	}
-	&:before,
-	&:after {
-		content: '';
-		z-index: 1;
-		position: absolute;
-		top: calc(var(--btn-height) / -2);
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-color: transparent ${(props: IKhoraButtonProps) => (props.invert ? `white` : `#fc3638`)}
-			transparent transparent;
-	}
-	&:before {
-		border-width: var(--btn-height) 17px var(--btn-height) 0;
-		transform: rotate(180deg);
-		left: -1px;
-	}
-	&:after {
-		border-width: var(--btn-height) 17px var(--btn-height) 0;
-		right: -1px;
 	}
 `;
 

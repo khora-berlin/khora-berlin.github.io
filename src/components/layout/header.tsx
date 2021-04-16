@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { ReactFitty } from 'react-fitty';
 
 const KhoraHeader = styled.header`
+	font-family: 'ArcadeClassic';
 	display: flex;
 	flex-direction: column;
 	align-items: center;
