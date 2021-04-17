@@ -2,18 +2,23 @@ import { createGlobalStyle, css } from 'styled-components';
 import ArcadeClassic from '../../fonts/ArcadeClassic.woff2';
 import KhoraSymbols from '../../fonts/KhoraSymbols.woff2';
 
-const breakpoints = {
+interface Breakpoints {
+	mobile: string;
+	tablet: string;
+	desktop: string;
+	largeDesktop: string;
+}
+
+type Breakpoint = keyof Breakpoints;
+
+const breakpoints: Breakpoints = {
 	mobile: `400px`,
 	tablet: `786px`,
 	desktop: `992px`,
 	largeDesktop: `1200px`,
 };
 
-export const mixinMediaQuery = (key: string, style: string) => {
-	console.log('mixin: ', key);
-	if (!(key in breakpoints)) {
-		return ``;
-	}
+export const mixinMediaQuery = (key: Breakpoint, style: string) => {
 	let styles = `@media (min-width: ${breakpoints[key as keyof typeof breakpoints]}){${style}}`;
 	return css`
 		${styles}
