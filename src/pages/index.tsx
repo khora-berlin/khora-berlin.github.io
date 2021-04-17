@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Layout from '../components/layout/layout';
 import OrderButton from '../components/button/orderButton';
+import Gallery from '../components/instagram/gallery';
 
 const IndexPage = () => (
 	<React.Fragment>
@@ -8,6 +9,7 @@ const IndexPage = () => (
 			<div>
 				<OrderButton />
 			</div>
+			<Gallery />
 			<article>
 				MO-SO 12-10 PM! <br />
 				ORDER FROM COOPCYCLE - WEB OR APP! <br />

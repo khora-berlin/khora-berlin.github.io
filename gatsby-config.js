@@ -29,9 +29,10 @@ module.exports = {
 			},
 		},
 		{
-			resolve: `gatsby-source-instagram`,
+			resolve: `gatsby-source-instagram-all`,
 			options: {
-				username: `18189163897`,
+				access_token:
+					'IGQVJXQ1NEUlZADZA1R1RlJuYVVrRU1WY0tmelkyb3gyZAEVCRU5hVmdRaUI2Tm1hMkZAyS1NwWFZAnZAjJod2ZAKdXB0RFRyWEVBZATAzQWRhaWd3dWdtTjBNNUp0MVpFX21uQV9WbG16WC1oTU9NVDFQbmJiWgZDZD',
 			},
 		},
 		`gatsby-plugin-typescript`,
