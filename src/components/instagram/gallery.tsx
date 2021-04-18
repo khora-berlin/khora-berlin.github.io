@@ -4,6 +4,15 @@
 
 import * as React from 'react';
 import { StaticQuery, graphql, useStaticQuery } from 'gatsby';
+import styled from 'styled-components';
+import Img from 'gatsby-image';
+
+const InstaGrid = styled.div`
+	margin: 2em 3em;
+	grid-gap: 0.6em;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+`;
 
 const Gallery = (props: GalleryProps) => (
 	<StaticQuery
@@ -27,8 +36,17 @@ const Gallery = (props: GalleryProps) => (
 			}
 		`}
 		render={data => {
-			console.log('data: ', data);
-			return <>Gallery</>;
+			const {
+				allInstagramContent: { edges: instaPosts },
+			} = data;
+			console.log('data: ', instaPosts[0]);
+			return (
+				<InstaGrid>
+					{instaPosts.slice(0, 15).map((post: any) => (
+						<Img fluid={post.node.localImage.childImageSharp?.fluid} />
+					))}
+				</InstaGrid>
+			);
 		}}
 	/>
 );
