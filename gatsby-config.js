@@ -5,6 +5,7 @@ module.exports = {
 		description: `Khora | Your favourite food delivery collective | Order food online`,
 		author: `@denningk`,
 	},
+	pathPrefix: '/website',
 	plugins: [
 		`gatsby-plugin-react-helmet`,
 		{
@@ -40,5 +41,4 @@ module.exports = {
 		// To learn more, visit: https://gatsby.dev/offline
 		// `gatsby-plugin-offline`,
 	],
-	pathPrefix: '/khora-berlin',
 };
