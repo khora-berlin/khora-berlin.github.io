@@ -8,10 +8,30 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 const InstaGrid = styled.div`
-	margin: 2em 3em;
+	@media only screen and (max-width: 500px) {
+		width: calc(100% - 1.2em);
+	}
+	@media only screen and (min-width: 500px) {
+		width: 95%;
+	}
+	@media only screen and (min-width: 600px) {
+		width: 90%;
+	}
+	@media only screen and (min-width: 1200px) {
+		width: 80%;
+	}
+	margin: 0em;
 	grid-gap: 0.6em;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+`;
+
+const GalleryContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #ffffff;
+	padding: 2em 0;
 `;
 
 const Gallery = (props: GalleryProps) => (
@@ -39,13 +59,14 @@ const Gallery = (props: GalleryProps) => (
 			const {
 				allInstagramContent: { edges: instaPosts },
 			} = data;
-			console.log('data: ', instaPosts[0]);
 			return (
-				<InstaGrid>
-					{instaPosts.slice(0, 15).map((post: any) => (
-						<Img fluid={post.node.localImage.childImageSharp?.fluid} />
-					))}
-				</InstaGrid>
+				<GalleryContainer>
+					<InstaGrid>
+						{instaPosts.slice(0, 15).map((post: any) => (
+							<Img fluid={post.node.localImage.childImageSharp?.fluid} />
+						))}
+					</InstaGrid>
+				</GalleryContainer>
 			);
 		}}
 	/>
