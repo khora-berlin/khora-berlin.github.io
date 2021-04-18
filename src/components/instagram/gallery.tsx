@@ -28,10 +28,23 @@ const InstaGrid = styled.div`
 
 const GalleryContainer = styled.div`
 	display: flex;
+	position: relative;
 	flex-direction: column;
 	align-items: center;
-	background: #ffffff;
+	z-index: 2;
 	padding: 2em 0;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		background: #ffffff;
+		transform: skew(0, -3deg);
+		height: 100%;
+	}
 `;
 
 const Gallery = (props: GalleryProps) => (
