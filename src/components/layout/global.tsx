@@ -12,7 +12,7 @@ interface Breakpoints {
 type Breakpoint = keyof Breakpoints;
 
 const breakpoints: Breakpoints = {
-	mobile: `400px`,
+	mobile: `300px`,
 	tablet: `786px`,
 	desktop: `992px`,
 	largeDesktop: `1200px`,
