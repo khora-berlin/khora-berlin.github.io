@@ -9,12 +9,12 @@ const IndexPage = () => (
 			<div>
 				<OrderButton />
 			</div>
-			<Gallery />
 			<article>
 				MO-SO 12-10 PM! <br />
 				ORDER FROM COOPCYCLE - WEB OR APP! <br />
 				FOR QUESTIONS CALL 01759920141
 			</article>
+			<Gallery />
 			<article>
 				BE LAZY, SHOW SOLIDARITY. <br />
 				ORDER WITH US - YOUR FAVOURITE COURIER COLLECTIVE, KHORA. <br />
