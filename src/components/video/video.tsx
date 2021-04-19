@@ -8,15 +8,11 @@ interface IVideo {
 }
 
 const KhoraVideo = styled.div`
-	width: 90%;
-	padding: 10px;
+	width: 80%;
 	margin: 0 auto;
-	text-align: center;
-	border-radius: 5% 5%;
 `;
 const KhoraVideoFrame = styled.iframe`
 	border: none;
-	border-radius: 8px;
 `;
 
 const Video = ({ videoSrcURL, videoTitle, description }: IVideo) => {
