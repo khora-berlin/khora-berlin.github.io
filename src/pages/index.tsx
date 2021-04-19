@@ -3,6 +3,7 @@ import Layout from '../components/layout/layout';
 import OrderButton from '../components/button/orderButton';
 import Video from '../components/video/video';
 import { graphql } from 'gatsby';
+import Gallery from '../components/instagram/gallery';
 
 interface IIndexProps {
 	data: {
@@ -60,6 +61,7 @@ const IndexPage = ({ data }: IIndexProps) => {
 						/>
 					</article>
 				)}
+				<Gallery />
 				{message && <article dangerouslySetInnerHTML={{ __html: message.html }} />}
 			</Layout>
 		</React.Fragment>

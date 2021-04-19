@@ -6,6 +6,7 @@ module.exports = {
 		author: `@denningk`,
 		orderLink: `https://khora.berlin/de/`,
 	},
+	pathPrefix: '/website',
 	plugins: [
 		`gatsby-plugin-react-helmet`,
 		{
@@ -30,9 +31,10 @@ module.exports = {
 			},
 		},
 		{
-			resolve: `gatsby-source-instagram`,
+			resolve: `gatsby-source-instagram-all`,
 			options: {
-				username: `18189163897`,
+				access_token:
+					'IGQVJXQ1NEUlZADZA1R1RlJuYVVrRU1WY0tmelkyb3gyZAEVCRU5hVmdRaUI2Tm1hMkZAyS1NwWFZAnZAjJod2ZAKdXB0RFRyWEVBZATAzQWRhaWd3dWdtTjBNNUp0MVpFX21uQV9WbG16WC1oTU9NVDFQbmJiWgZDZD',
 			},
 		},
 		{
@@ -48,5 +50,4 @@ module.exports = {
 		// To learn more, visit: https://gatsby.dev/offline
 		// `gatsby-plugin-offline`,
 	],
-	pathPrefix: '/khora-berlin',
 };
