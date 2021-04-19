@@ -49,10 +49,19 @@ const GlobalStyle = createGlobalStyle`
       
     body{
       width: 100%;
-      min-height: 100vh;      
       font-family: 'OpenSans';
-      font-size: 15px;
+      min-height: 100vh;      
+      font-size: 16px;
     }
+  }
+  h1{
+    font-size: 2em;
+    margin-bottom: 40px;
+  }
+  h2{
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-decoration: underline;
   }
   a:link, a:hover, a:visited {
     text-decoration: none;
