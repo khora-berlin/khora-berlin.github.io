@@ -10,6 +10,7 @@ interface IKhoraButtonProps {
 const KhoraButton = styled.button`
 	&.lg {
 		font-family: 'ArcadeClassic';
+		${mixinMediaQuery(`xxs`, `--btn-width: 98%`)}
 		${mixinMediaQuery(`mobile`, `--btn-width: 95%`)}
 		${mixinMediaQuery(`tablet`, `--btn-width: 85%`)}
 		${mixinMediaQuery(`desktop`, `--btn-width: 70%`)}
@@ -40,8 +41,7 @@ const KhoraButton = styled.button`
 		}
 	}
 	&.sm {
-		${mixinMediaQuery(`mobile`, `--btn-width: 120px`)}
-		${mixinMediaQuery(`tablet`, `--btn-width: 120px`)}
+		${mixinMediaQuery(`xxs`, `--btn-width: 120px`)}
 		${mixinMediaQuery(`desktop`, `--btn-width: 130px`)}
 		${mixinMediaQuery(`largeDesktop`, `--btn-width: 140px`)}
 		--btn-height: 50px;

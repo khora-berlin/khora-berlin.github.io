@@ -4,6 +4,7 @@ import KhoraSymbols from '../../fonts/KhoraSymbols.woff2';
 import OpenSansRegular from '../../fonts/OpenSans-Semibold.woff2';
 
 interface Breakpoints {
+  xxs: string
 	mobile: string;
 	tablet: string;
 	desktop: string;
@@ -13,6 +14,7 @@ interface Breakpoints {
 type Breakpoint = keyof Breakpoints;
 
 const breakpoints: Breakpoints = {
+  xxs: `100px`,
 	mobile: `300px`,
 	tablet: `786px`,
 	desktop: `992px`,
