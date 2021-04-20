@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { mixinMediaQuery } from '../layout/global';
 
 interface IVideo {
 	videoSrcURL: string;
@@ -8,7 +9,11 @@ interface IVideo {
 }
 
 const KhoraVideo = styled.div`
-	width: 80%;
+	${mixinMediaQuery(`xxs`, `width: 98%`)}
+	${mixinMediaQuery(`mobile`, `width: 90%`)}
+	${mixinMediaQuery(`tablet`, `width: 70%`)}
+	${mixinMediaQuery(`desktop`, `width: 70%`)}
+	${mixinMediaQuery(`largeDesktop`, `width: 65%`)}
 	margin: 0 auto;
 `;
 const KhoraVideoFrame = styled.iframe`
