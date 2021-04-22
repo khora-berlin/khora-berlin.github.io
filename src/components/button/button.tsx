@@ -41,6 +41,7 @@ const KhoraButton = styled.button`
 		}
 	}
 	&.sm {
+		font-family: 'ArcadeClassic';
 		${mixinMediaQuery(`xxs`, `--btn-width: 120px`)}
 		${mixinMediaQuery(`desktop`, `--btn-width: 130px`)}
 		${mixinMediaQuery(`largeDesktop`, `--btn-width: 140px`)}
