@@ -16,7 +16,7 @@ const KhoraButton = styled.button`
 		${mixinMediaQuery(`desktop`, `--btn-width: 70%`)}
 		${mixinMediaQuery(`largeDesktop`, `--btn-width: 50%`)}
 		--btn-height: 60px;
-		--btn-font-size: 1.5em;
+		--btn-font-size: 2.2em;
 		&:before,
 		&:after {
 			content: '';
@@ -60,17 +60,24 @@ const KhoraButton = styled.button`
 	}
 `;
 
+const Symbol = styled.div`
+	font-family: 'KhoraSymbols';
+	display: inline;
+`;
+
 interface IButtonProps {
 	title: string;
 	size?: `sm` | `lg`;
 	invert?: boolean;
+	iconL?: string;
+	iconR?: string;
 }
 
-const Button = ({ title, size, invert }: IButtonProps) => {
+const Button = ({ title, size, invert, iconL, iconR }: IButtonProps) => {
 	return (
 		<>
 			<KhoraButton invert={invert} className={size}>
-				{title}
+				<Symbol>{iconL}</Symbol> {title} <Symbol>{iconR}</Symbol>
 			</KhoraButton>
 		</>
 	);

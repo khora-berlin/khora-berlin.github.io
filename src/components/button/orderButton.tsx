@@ -16,7 +16,7 @@ export default function OrderButton() {
 	return (
 		<>
 			<a href={data.site.siteMetadata.orderLink}>
-				<Button title="Order now" size="lg" />
+				<Button title="Order now" iconL="B" iconR="B" size="lg" />
 			</a>
 		</>
 	);
