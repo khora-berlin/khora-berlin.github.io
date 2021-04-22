@@ -32,14 +32,17 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
       font-family: 'KhoraSymbols';
       src: url('${KhoraSymbols}') format('woff2');
+      font-display: swap;
   }
   @font-face {
       font-family: 'OpenSans';
       src: url('${OpenSansRegular}') format('woff2');
+      font-display: swap;
   }
   @font-face {
       font-family: 'ArcadeClassic';
       src: url('${ArcadeClassic}') format('woff2');
+      font-display: swap;
   }
   *{
     --main-bg-color: #fc3638;
