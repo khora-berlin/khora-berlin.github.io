@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { ReactFitty } from 'react-fitty';
+import { Link } from 'gatsby';
 
 const KhoraHeader = styled.header`
 	font-family: 'ArcadeClassic';
@@ -46,14 +47,16 @@ const SubText = styled(ReactFitty)`
 
 const Header = (props: HeaderProps) => {
 	return (
-		<KhoraHeader>
-			<KhoraTitle>
-				<Text>
-					KH<Symbol>H</Symbol>RA
-				</Text>
-				<SubText>{props.siteSubTitle}</SubText>
-			</KhoraTitle>
-		</KhoraHeader>
+		<Link to="/">
+			<KhoraHeader>
+				<KhoraTitle>
+					<Text>
+						KH<Symbol>H</Symbol>RA
+					</Text>
+					<SubText>{props.siteSubTitle}</SubText>
+				</KhoraTitle>
+			</KhoraHeader>
+		</Link>
 	);
 };
 
