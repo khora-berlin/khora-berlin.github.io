@@ -4,6 +4,7 @@ import OrderButton from '../components/button/orderButton';
 import Video from '../components/video/video';
 import { graphql } from 'gatsby';
 import Gallery from '../components/instagram/gallery';
+import styled from 'styled-components';
 
 interface IIndexProps {
 	data: {
@@ -37,6 +38,11 @@ export const query = graphql`
 	}
 `;
 
+// TODO: temporary until a good spacer solution is found
+const VideoContainer = styled.article`
+	margin-bottom: 80px;
+`
+
 const IndexPage = ({ data }: IIndexProps) => {
 	const { allMarkdownRemark } = data;
 	const { nodes } = allMarkdownRemark;
@@ -53,13 +59,13 @@ const IndexPage = ({ data }: IIndexProps) => {
 				</article>
 				{officehours && <article dangerouslySetInnerHTML={{ __html: officehours.html }} />}
 				{video && (
-					<article>
+					<VideoContainer>
 						<Video
 							videoSrcURL={video.frontmatter.videoSourceURL}
 							videoTitle={video.frontmatter.videoTitle}
 							description={video.html}
 						/>
-					</article>
+					</VideoContainer>
 				)}
 				<Gallery />
 				{message && <article dangerouslySetInnerHTML={{ __html: message.html }} />}
