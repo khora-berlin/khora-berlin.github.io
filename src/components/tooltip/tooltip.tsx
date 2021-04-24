@@ -9,7 +9,7 @@ interface Props {
 
 export default function Tooltip({ children, html }:Props) {
   return (
-    <Tippy trigger="mouseenter" position="top" size="small" html={html}>
+    <Tippy trigger="mouseenter" position="top" size="small" arrow html={html}>
       {children}
     </Tippy>
   );
