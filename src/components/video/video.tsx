@@ -27,8 +27,8 @@ const Video = ({ videoSrcURL, videoTitle, description }: IVideo) => {
 				<KhoraVideoFrame
 					src={`${videoSrcURL}?title=0&portrait=0`}
 					style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }}
-					frameborder="0"
-					allowfullscreen
+					frameBorder="0"
+					allowFullScreen
 				></KhoraVideoFrame>
 			</div>
 			<script src="https://player.vimeo.com/api/player.js"></script>
