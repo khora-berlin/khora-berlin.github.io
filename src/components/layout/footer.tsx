@@ -17,7 +17,7 @@ const KhoraFooter = styled.footer`
 export default function Footer() {
 	return (
 		<KhoraFooter>
-			<Link to="/impressum">HOME</Link>
+			<Link to="/">HOME</Link>
 			<Link to="/impressum">IMPRESSUM</Link>
 			<Link to="/contact">CONTACT</Link>
 		</KhoraFooter>
