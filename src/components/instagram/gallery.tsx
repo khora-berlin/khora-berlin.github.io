@@ -6,6 +6,7 @@ import * as React from 'react';
 import { StaticQuery, graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import Tooltip from '../tooltip/tooltip'
 
 const InstaGrid = styled.div`
 	@media only screen and (max-width: 500px) {
@@ -76,7 +77,10 @@ const Gallery = (props: GalleryProps) => (
 				<GalleryContainer>
 					<InstaGrid>
 						{instaPosts.slice(0, 15).map((post: any) => (
-							<Img fluid={post.node.localImage.childImageSharp?.fluid} />
+							<Tooltip html={post.node.caption} >
+								<Img fluid={post.node.localImage.childImageSharp?.fluid} />
+							</Tooltip>
+							
 						))}
 					</InstaGrid>
 				</GalleryContainer>
