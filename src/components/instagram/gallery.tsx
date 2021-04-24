@@ -27,6 +27,12 @@ const InstaGrid = styled.div`
 	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 `;
 
+const Bottom = styled.div`
+    color: red;
+	padding-top: 1em;
+`
+
+
 const GalleryContainer = styled.div`
 	display: flex;
 	position: relative;
@@ -83,6 +89,9 @@ const Gallery = (props: GalleryProps) => (
 							
 						))}
 					</InstaGrid>
+					<Bottom>
+						<a href={'https://www.instagram.com/khora.berlin'}>... more on Instagram</a>
+					</Bottom>
 				</GalleryContainer>
 			);
 		}}
