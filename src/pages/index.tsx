@@ -2,9 +2,8 @@ import * as React from 'react';
 import Layout from '../components/layout/layout';
 import OrderButton from '../components/button/orderButton';
 import Video from '../components/video/video';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Gallery from '../components/instagram/gallery';
-import styled from 'styled-components';
 
 interface IIndexProps {
 	data: {
@@ -38,11 +37,6 @@ export const query = graphql`
 	}
 `;
 
-// TODO: temporary until a good spacer solution is found
-const VideoContainer = styled.article`
-	margin-bottom: 80px;
-`
-
 const IndexPage = ({ data }: IIndexProps) => {
 	const { allMarkdownRemark } = data;
 	const { nodes } = allMarkdownRemark;
@@ -50,22 +44,27 @@ const IndexPage = ({ data }: IIndexProps) => {
 	const video = nodes.find(node => node.frontmatter.title === `vimeo`);
 	const officehours = nodes.find(node => node.frontmatter.title === `Office Hours`);
 	const message = nodes.find(node => node.frontmatter.title === `Message`);
+	const aboutShort = nodes.find(node => node.frontmatter.title === `aboutShort`);
+
+	const about = nodes.find(node => node.frontmatter.title === `about`);
 
 	return (
 		<React.Fragment>
 			<Layout>
-				<article>
-					<OrderButton />
-				</article>
+				<OrderButton />
 				{officehours && <article dangerouslySetInnerHTML={{ __html: officehours.html }} />}
 				{video && (
-					<VideoContainer>
-						<Video
-							videoSrcURL={video.frontmatter.videoSourceURL}
-							videoTitle={video.frontmatter.videoTitle}
-							description={video.html}
-						/>
-					</VideoContainer>
+					<Video
+						videoSrcURL={video.frontmatter.videoSourceURL}
+						videoTitle={video.frontmatter.videoTitle}
+						description={video.html}
+					/>
+				)}
+				{about && <article dangerouslySetInnerHTML={{ __html: aboutShort.html.toUpperCase() }} />}
+				{about && (
+					<article>
+						<Link to="/about">show more ...</Link>
+					</article>
 				)}
 				<Gallery />
 				{message && <article dangerouslySetInnerHTML={{ __html: message.html }} />}

@@ -2,6 +2,7 @@ import { createGlobalStyle, css } from 'styled-components';
 import ArcadeClassic from '../../fonts/ArcadeClassic.woff2';
 import KhoraSymbols from '../../fonts/KhoraSymbols.woff2';
 import OpenSansRegular from '../../fonts/OpenSans-Semibold.woff2';
+import styled from 'styled-components';
 
 interface Breakpoints {
   xxs: string
@@ -79,5 +80,55 @@ const GlobalStyle = createGlobalStyle`
     margin: 20px 0;
     line-height: 30px;
   }
+`;
+
+export const SiteContent = styled.div`
+	background: var(--main-bg-color);
+	color: var(--main-fg-color);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: var(--main-gap);
+	min-height: 100vh;
+	max-width: 800px;
+	margin: 0 auto;
+`;
+
+export const Main = styled.main`
+	height: 100%;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+	article p {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+	a {
+		font-family: 'ArcadeClassic';
+	}
+`;
+
+export const MediaContainer = styled.div`
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+	z-index: 2;
+	padding: 2em 0;
+	margin: 5px 0 30px;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		background: #ffffff;
+		transform: skew(0, -3deg);
+		height: 100%;
+	}
 `;
 export default GlobalStyle;

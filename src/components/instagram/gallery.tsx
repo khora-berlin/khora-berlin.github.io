@@ -7,6 +7,7 @@ import { StaticQuery, graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import Tooltip from '../tooltip/tooltip';
+import { mixinMediaQuery, MediaContainer } from '../layout/global';
 
 const InstaGrid = styled.div`
 	@media only screen and (max-width: 500px) {
@@ -30,27 +31,6 @@ const InstaGrid = styled.div`
 const Bottom = styled.div`
 	color: red;
 	padding-top: 1em;
-`;
-
-const GalleryContainer = styled.div`
-	display: flex;
-	position: relative;
-	flex-direction: column;
-	align-items: center;
-	z-index: 2;
-	padding: 2em 0;
-	&:after {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		z-index: -1;
-		background: #ffffff;
-		transform: skew(0, -3deg);
-		height: 100%;
-	}
 `;
 
 const Gallery = (props: GalleryProps) => (
@@ -79,7 +59,7 @@ const Gallery = (props: GalleryProps) => (
 				allInstagramContent: { edges: instaPosts },
 			} = data;
 			return (
-				<GalleryContainer>
+				<MediaContainer>
 					<InstaGrid>
 						{instaPosts.slice(0, 15).map((post: any) => (
 							<Tooltip html={post.node.caption}>
@@ -90,7 +70,7 @@ const Gallery = (props: GalleryProps) => (
 					<Bottom>
 						<a href={'https://www.instagram.com/khora.berlin'}>... more on Instagram</a>
 					</Bottom>
-				</GalleryContainer>
+				</MediaContainer>
 			);
 		}}
 	/>

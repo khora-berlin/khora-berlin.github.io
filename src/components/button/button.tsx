@@ -14,7 +14,7 @@ const KhoraButton = styled.button`
 		${mixinMediaQuery(`mobile`, `--btn-width: 95%`)}
 		${mixinMediaQuery(`tablet`, `--btn-width: 85%`)}
 		${mixinMediaQuery(`desktop`, `--btn-width: 70%`)}
-		${mixinMediaQuery(`largeDesktop`, `--btn-width: 50%`)}
+		${mixinMediaQuery(`largeDesktop`, `--btn-width: 70%`)}
 		--btn-height: 60px;
 		--btn-font-size: 2.2em;
 		&:before,
