@@ -37,11 +37,12 @@ const Gallery = (props: GalleryProps) => (
 	<StaticQuery
 		query={graphql`
 			query myQuery {
-				allInstagramContent {
+				allInstagramContent(filter: { media_type: { eq: "IMAGE" } }) {
 					edges {
-						node {
+						node{
 							caption
 							media_url
+							media_type
 							localImage {
 								childImageSharp {
 									fluid(maxHeight: 200, maxWidth: 200, quality: 85) {
