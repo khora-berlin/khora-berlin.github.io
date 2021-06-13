@@ -117,8 +117,8 @@ export const MediaContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	z-index: 2;
-	padding: 2em 0;
-	margin: 5px 0 30px;
+	padding: 5em 0;
+	margin: 5em 0 5em;
 	&:after {
 		content: '';
 		position: absolute;
