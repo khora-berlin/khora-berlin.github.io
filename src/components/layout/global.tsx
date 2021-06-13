@@ -58,6 +58,7 @@ const GlobalStyle = createGlobalStyle`
       font-family: 'OpenSans';
       min-height: 100vh;      
       font-size: 16px;
+	  background: var(--main-bg-color);
     }
   }
   h1{
