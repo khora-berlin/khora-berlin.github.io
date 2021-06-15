@@ -14,9 +14,19 @@ const KhoraButton = styled.button`
 		${mixinMediaQuery(`mobile`, `--btn-width: 95%`)}
 		${mixinMediaQuery(`tablet`, `--btn-width: 85%`)}
 		${mixinMediaQuery(`desktop`, `--btn-width: 70%`)}
-		${mixinMediaQuery(`largeDesktop`, `--btn-width: 70%`)}
+		${mixinMediaQuery(`largeDesktop`, `--btn-width: 40%`)}
 		--btn-height: 60px;
 		--btn-font-size: 2.2em;
+		box-shadow: 1px 15px 12px -15px #000000;
+		transition: all 0.2s;
+		&:hover {
+			box-shadow: none;
+			${mixinMediaQuery(`xxs`, `--btn-width: 96%`)}
+			${mixinMediaQuery(`mobile`, `--btn-width: 95%`)}
+			${mixinMediaQuery(`tablet`, `--btn-width: 85%`)}
+			${mixinMediaQuery(`desktop`, `--btn-width: 70%`)}
+			${mixinMediaQuery(`largeDesktop`, `--btn-width: 39%`)}
+		}
 		&:before,
 		&:after {
 			content: '';
