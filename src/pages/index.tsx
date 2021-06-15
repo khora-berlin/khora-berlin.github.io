@@ -51,23 +51,29 @@ const IndexPage = ({ data }: IIndexProps) => {
 	return (
 		<React.Fragment>
 			<Layout>
-				<OrderButton />
 				{officehours && <article dangerouslySetInnerHTML={{ __html: officehours.html }} />}
+				<article>
+					<OrderButton />
+				</article>
+				<article>
+					<Gallery />
+				</article>
+				{message && <article dangerouslySetInnerHTML={{ __html: message.html }} />}
+				<article>
+					{video && (
+						<Video
+							videoSrcURL={video.frontmatter.videoSourceURL}
+							videoTitle={video.frontmatter.videoTitle}
+							description={video.html}
+						/>
+					)}
+				</article>
 				{about && <article dangerouslySetInnerHTML={{ __html: aboutShort.html.toUpperCase() }} />}
 				{about && (
 					<article>
 						<Link to="/about">show more ...</Link>
 					</article>
 				)}
-				<Gallery />
-				{message && <article dangerouslySetInnerHTML={{ __html: message.html }} />}
-				{video && (
-					<Video
-						videoSrcURL={video.frontmatter.videoSourceURL}
-						videoTitle={video.frontmatter.videoTitle}
-						description={video.html}
-					/>
-				)}	
 			</Layout>
 		</React.Fragment>
 	);

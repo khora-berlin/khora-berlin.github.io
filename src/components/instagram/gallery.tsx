@@ -20,7 +20,7 @@ const InstaGrid = styled.div`
 		width: 90%;
 	}
 	@media only screen and (min-width: 1200px) {
-		width: 80%;
+		width: 40%;
 	}
 	margin: 0em;
 	grid-gap: 0.6em;
@@ -45,7 +45,7 @@ const Gallery = (props: GalleryProps) => (
 							media_type
 							localImage {
 								childImageSharp {
-									fluid(maxHeight: 200, maxWidth: 200, quality: 85) {
+									fluid(maxHeight: 150, maxWidth: 150, quality: 85) {
 										...GatsbyImageSharpFluid_withWebp
 									}
 								}
@@ -62,7 +62,7 @@ const Gallery = (props: GalleryProps) => (
 			return (
 				<MediaContainer>
 					<InstaGrid>
-						{instaPosts.slice(0, 15).map((post: any) => (
+						{instaPosts.slice(0, 12).map((post: any) => (
 							<Tooltip html={post.node.caption}>
 								<Img fluid={post.node.localImage.childImageSharp?.fluid} />
 							</Tooltip>

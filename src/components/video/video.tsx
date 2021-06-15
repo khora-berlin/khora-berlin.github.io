@@ -13,7 +13,7 @@ const KhoraVideo = styled.div`
 	${mixinMediaQuery(`mobile`, `width: 90%`)}
 	${mixinMediaQuery(`tablet`, `width: 90%`)}
 	${mixinMediaQuery(`desktop`, `width: 80%`)}
-	${mixinMediaQuery(`largeDesktop`, `width: 80%`)}
+	${mixinMediaQuery(`largeDesktop`, `width: 45%`)}
 	margin: 0 auto;
 `;
 const KhoraVideoFrame = styled.iframe`
@@ -22,7 +22,7 @@ const KhoraVideoFrame = styled.iframe`
 
 const Video = ({ videoSrcURL, videoTitle, description }: IVideo) => {
 	return (
-		<MediaContainer>
+		<MediaContainer rotate="right">
 			<KhoraVideo>
 				<div style={{ padding: '41.88% 0 0 0', position: 'relative', margin: 'auto' }}>
 					<KhoraVideoFrame

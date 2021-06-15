@@ -5,7 +5,7 @@ import OpenSansRegular from '../../fonts/OpenSans-Semibold.woff2';
 import styled from 'styled-components';
 
 interface Breakpoints {
-  xxs: string
+	xxs: string;
 	mobile: string;
 	tablet: string;
 	desktop: string;
@@ -15,7 +15,7 @@ interface Breakpoints {
 type Breakpoint = keyof Breakpoints;
 
 const breakpoints: Breakpoints = {
-  xxs: `100px`,
+	xxs: `100px`,
 	mobile: `300px`,
 	tablet: `786px`,
 	desktop: `992px`,
@@ -57,8 +57,8 @@ const GlobalStyle = createGlobalStyle`
       width: 100%;
       font-family: 'OpenSans';
       min-height: 100vh;      
-      font-size: 16px;
-	  background: var(--main-bg-color);
+	  	background: var(--main-bg-color);
+      font-size: 18px;
     }
   }
   h1{
@@ -70,6 +70,9 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.2em;
     text-decoration: underline;
   }
+	a {
+		font-family: 'ArcadeClassic';
+	}
   a:link, a:hover, a:visited {
     text-decoration: none;
     color: inherit;
@@ -78,9 +81,32 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: underline;
   }
   article{    
-    margin: 20px 0;
+    /* margin: 40px 0 0 0; */
+		padding: 50px 0;
     line-height: 30px;
+		p {
+			max-width: 40%;
+			margin: 0 auto;
+		}
   }
+`;
+
+interface IMenuProps {
+	type?: `footer`;
+}
+export const Menu = styled.div`
+	display: flex;
+	justify-content: center;
+	font-family: 'ArcadeClassic';
+	text-align: center;
+	font-size: 1.2em;
+	padding: 1em 1em;
+	background: var(--main-fg-color);
+	margin-bottom: ${(props: IMenuProps) => (props.type === `footer` ? `30px` : `0`)};
+	color: var(--main-bg-color);
+	* {
+		margin: 0 10px;
+	}
 `;
 
 export const SiteContent = styled.div`
@@ -91,7 +117,7 @@ export const SiteContent = styled.div`
 	justify-content: space-between;
 	gap: var(--main-gap);
 	min-height: 100vh;
-	max-width: 800px;
+	/* max-width: 800px; */
 	margin: 0 auto;
 `;
 
@@ -102,23 +128,19 @@ export const Main = styled.main`
 	flex-direction: column;
 	justify-content: space-around;
 	text-align: center;
-	article p {
-		max-width: 80%;
-		margin: 0 auto;
-	}
-	a {
-		font-family: 'ArcadeClassic';
-	}
 `;
 
+interface IMediaContainerProps {
+	rotate?: `left` | `right`;
+}
 export const MediaContainer = styled.div`
 	display: flex;
 	position: relative;
 	flex-direction: column;
 	align-items: center;
 	z-index: 2;
-	padding: 5em 0;
-	margin: 5em 0 5em;
+	padding: 8em 0;
+	margin: 60px 0 30px;
 	&:after {
 		content: '';
 		position: absolute;
@@ -128,7 +150,10 @@ export const MediaContainer = styled.div`
 		left: 0;
 		z-index: -1;
 		background: #ffffff;
-		transform: skew(0, -3deg);
+		transform: skew(
+			0,
+			${(props: IMediaContainerProps) => (props.rotate === `right` ? `2deg` : `-2deg`)}
+		);
 		height: 100%;
 	}
 `;
