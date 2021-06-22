@@ -37,9 +37,16 @@ const Gallery = (props: GalleryProps) => (
 	<StaticQuery
 		query={graphql`
 			query myQuery {
+				fileName: file(relativePath: { eq: "insta.png" }) {
+					childImageSharp {
+						fluid(maxWidth: 80, maxHeight: 80) {
+							...GatsbyImageSharpFluid
+						}
+					}
+				}
 				allInstagramContent(filter: { media_type: { eq: "IMAGE" } }) {
 					edges {
-						node{
+						node {
 							caption
 							media_url
 							media_type
@@ -69,7 +76,9 @@ const Gallery = (props: GalleryProps) => (
 						))}
 					</InstaGrid>
 					<Bottom>
-						<a href={'https://www.instagram.com/khora.berlin'}>... more on Instagram</a>
+						<a href={'https://www.instagram.com/khora.berlin'} target="__blank">
+							more on <br /> <Img fluid={data.fileName.childImageSharp.fluid} alt="Instagram" />
+						</a>
 					</Bottom>
 				</MediaContainer>
 			);
