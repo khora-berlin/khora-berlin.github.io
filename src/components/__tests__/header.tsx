@@ -11,14 +11,14 @@ describe('Header', () => {
 		const { asFragment } = render(
 			<>
 				<GlobalStyle />
-				<Header siteSubTitle="Your favourite food delivery collective" />
+				<Header siteSubTitle="food delivery collective" />
 			</>
 		);
 		expect(asFragment()).toMatchSnapshot();
 	});
 	it('contains correct siteSubTitle', () => {
-		render(<Header key="two" siteSubTitle="Your favourite food delivery collective" />);
-		const text = screen.getByText('Your favourite food delivery collective');
+		render(<Header key="two" siteSubTitle="food delivery collective" />);
+		const text = screen.getByText('food delivery collective');
 		expect(text).toBeInTheDocument();
 	});
 });
