@@ -85,7 +85,18 @@ const GlobalStyle = createGlobalStyle`
 		padding: 50px 0;
     line-height: 30px;
 		p {
-			max-width: 40%;
+			@media only screen and (max-width: 500px) {
+				width: 85%;
+			}
+			@media only screen and (min-width: 500px) {
+				width: 80%;
+			}
+			@media only screen and (min-width: 600px) {
+				width: 60%;
+			}
+			@media only screen and (min-width: 1200px) {
+				width: 40%;
+			}
 			margin: 0 auto;
 		}
   }
