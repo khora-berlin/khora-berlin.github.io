@@ -10,7 +10,7 @@ interface IKhoraButtonProps {
 const KhoraButton = styled.button`
 	&.lg {
 		font-family: 'ArcadeClassic';
-		${mixinMediaQuery(`xxs`, `--btn-width: 98%`)}
+		${mixinMediaQuery(`xxs`, `--btn-width: 98%; font-size: 1.4em`)}
 		${mixinMediaQuery(`mobile`, `--btn-width: 95%`)}
 		${mixinMediaQuery(`tablet`, `--btn-width: 85%`)}
 		${mixinMediaQuery(`desktop`, `--btn-width: 70%`)}
