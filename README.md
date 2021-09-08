@@ -219,4 +219,4 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 1.  **`README.md`**: A text file containing useful reference information about your project.
 
-1.  **`tsconfig.json`**: This is a configuration file for [Typescript](https://www.typescriptlang.org/). Typescript is a typed superset of JavaScript.
+1.  **`tsconfig.json`**: This is a configuration file for [Typescript](https://www.typescriptlang.org/). Typescript is a typed superset of JavaScript..
