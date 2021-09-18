@@ -8,11 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: github-pages
-    env: 
-      INSTA_API_KEY: ${{ secrets.INSTA_API_KEY }}
     steps:
       - uses: actions/checkout@v1
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
+          gatsby-args: --prefix-paths
