@@ -7,7 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: github-pages
     env: 
       INSTA_API_KEY: ${{ secrets.INSTA_API_KEY }}
     steps:
