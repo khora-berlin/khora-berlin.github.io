@@ -1,5 +1,5 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+require('dotenv').config({
+	path: `.env.${process.env.NODE_ENV}`,
 });
 
 module.exports = {
@@ -37,8 +37,7 @@ module.exports = {
 		{
 			resolve: `gatsby-source-instagram-all`,
 			options: {
-				access_token:
-					'IGQVJVbFhteGpuNGhtVTFuc1hTQWpRb3dkOFk5SWs3YzFZAbEVIbmtDeWNZARnlvM2lnMW5seFllM3M0ekw4Y3BMTl9sM3doVVdQZAEJNMnUyYV9ldjliRFhkNDZAuaURicjNNTGtFcjUzVGhqUDdMek42agZDZD',
+				access_token: process.env.INSTA_API_KEY,
 			},
 		},
 		{
