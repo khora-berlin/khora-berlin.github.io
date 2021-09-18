@@ -9,6 +9,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - run: |
+          cat << EOF >> .env
+          INSTA_API_KEY=${{ secrets.INSTA_API_KEY }}
+          EOF
       - uses: actions/checkout@v1
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
