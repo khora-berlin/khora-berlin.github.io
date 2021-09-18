@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: gatsby-deploy
     env: 
-      INSTA_API_KEY: ${{ secrets.ACCESS_TOKEN }}
+      INSTA_API_KEY: ${{ secrets.INSTA_API_KEY }}
     steps:
       - uses: actions/checkout@v1
       - uses: enriikke/gatsby-gh-pages-action@v2
