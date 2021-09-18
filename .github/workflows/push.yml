@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: gatsby-deploy
+    environment: github-pages
     env: 
       INSTA_API_KEY: ${{ secrets.INSTA_API_KEY }}
     steps:
