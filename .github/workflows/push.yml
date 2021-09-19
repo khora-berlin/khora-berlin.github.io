@@ -3,12 +3,12 @@ name: Gatsby Publish on Push
 on:
   push:
     branches:
-      - main  
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env: 
+    env:
       INSTA_API_KEY: ${{ secrets.INSTA_API_KEY }}
     steps:
       - uses: actions/checkout@v1
@@ -17,5 +17,3 @@ jobs:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
           gatsby-args: --prefix-paths
-          cname: codingconnects.eu
-          
