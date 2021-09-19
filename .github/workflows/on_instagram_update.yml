@@ -1,4 +1,4 @@
-name: Gatsby Publish on repository_dispatch
+name: Gatsby Publish on Instagram Update
 
 on:
   repository_dispatch:
