@@ -8,7 +8,6 @@ module.exports = {
 		author: `@denningk`,
 		orderLink: `https://khora.berlin/de/`,
 	},
-	pathPrefix: '/website',
 	plugins: [
 		`gatsby-plugin-react-helmet`,
 		{
