@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env: 
+    env:
       INSTA_API_KEY: ${{ secrets.KHORA_INSTA_API_KEY }}
     steps:
       - uses: actions/checkout@v1
