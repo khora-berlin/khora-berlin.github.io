@@ -13,6 +13,7 @@ Khora is a collective. We have no single owner, no CEO, no managers, no director
 
 We’re an autonomous group where everyone has a say and can influence the internal structure/ideas. No angel investors, no quotas, no agenda to fulfill.
 
+
 Rather, we’re built from the ground up in a way that benefits us and the community around us. A very hands-on approach, we’re focused on working in a way we’d like to see the world shaped.
 
 ## Why us?
