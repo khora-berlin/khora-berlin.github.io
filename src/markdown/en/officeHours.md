@@ -1,8 +1,9 @@
 ---
-title: "Office Hours"
+title: 'Office Hours'
 ---
 
-MO-SO 12-10 PM!
+MO-TH 12-3 PM & 5-10PM!
+FR-SU 12-10 PM!
 
 ORDER FROM COOPCYCLE - WEB OR APP!
 
