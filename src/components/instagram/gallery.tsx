@@ -39,7 +39,7 @@ const Gallery = (props: GalleryProps) => (
 			query myQuery {
 				fileName: file(relativePath: { eq: "insta.png" }) {
 					childImageSharp {
-						gatsbyImageData(width: 80)
+						gatsbyImageData(width: 80, height: 80)
 					}
 				}
 				allInstagramContent(filter: { media_type: { eq: "IMAGE" } }) {
@@ -50,7 +50,7 @@ const Gallery = (props: GalleryProps) => (
 							media_type
 							localImage {
 								childImageSharp {
-									gatsbyImageData(width: 150, quality: 85)
+									gatsbyImageData(width: 150, height: 150, quality: 85)
 								}
 							}
 						}
