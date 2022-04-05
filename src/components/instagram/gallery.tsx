@@ -3,12 +3,11 @@
  */
 
 import * as React from 'react';
-import { StaticQuery, graphql, useStaticQuery } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Tooltip from '../tooltip/tooltip';
-import { mixinMediaQuery, MediaContainer } from '../layout/global';
+import { MediaContainer } from '../layout/global';
 
 const InstaGrid = styled.div`
 	@media only screen and (max-width: 500px) {
