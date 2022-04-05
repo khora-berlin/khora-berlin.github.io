@@ -6,6 +6,7 @@ import * as React from 'react';
 import { StaticQuery, graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import Tooltip from '../tooltip/tooltip';
 import { mixinMediaQuery, MediaContainer } from '../layout/global';
 
@@ -39,9 +40,7 @@ const Gallery = (props: GalleryProps) => (
 			query myQuery {
 				fileName: file(relativePath: { eq: "insta.png" }) {
 					childImageSharp {
-						fluid(maxWidth: 80, maxHeight: 80) {
-							...GatsbyImageSharpFluid
-						}
+						gatsbyImageData(width: 80)
 					}
 				}
 				allInstagramContent(filter: { media_type: { eq: "IMAGE" } }) {
@@ -52,9 +51,7 @@ const Gallery = (props: GalleryProps) => (
 							media_type
 							localImage {
 								childImageSharp {
-									fluid(maxHeight: 150, maxWidth: 150, quality: 85) {
-										...GatsbyImageSharpFluid_withWebp
-									}
+									gatsbyImageData(width: 150, quality: 85)
 								}
 							}
 						}
@@ -71,13 +68,17 @@ const Gallery = (props: GalleryProps) => (
 					<InstaGrid>
 						{instaPosts.slice(0, 12).map((post: any) => (
 							<Tooltip html={post.node.caption}>
-								<Img fluid={post.node.localImage.childImageSharp?.fluid} />
+								<GatsbyImage
+									image={post.node.localImage.childImageSharp?.gatsbyImageData}
+									alt="Instagram"
+								/>
 							</Tooltip>
 						))}
 					</InstaGrid>
 					<Bottom>
 						<a href={'https://www.instagram.com/khora.berlin'} target="__blank">
-							more on <br /> <Img fluid={data.fileName.childImageSharp.fluid} alt="Instagram" />
+							more on <br />{' '}
+							<GatsbyImage image={data.fileName.childImageSharp.gatsbyImageData} alt="Instagram" />
 						</a>
 					</Bottom>
 				</MediaContainer>
