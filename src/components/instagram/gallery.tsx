@@ -33,7 +33,7 @@ const Bottom = styled.div`
 	padding-top: 1em;
 `;
 
-const Gallery = (props: GalleryProps) => (
+const Gallery = () => (
 	<StaticQuery
 		query={graphql`
 			query myQuery {
@@ -85,6 +85,5 @@ const Gallery = (props: GalleryProps) => (
 		}}
 	/>
 );
-interface GalleryProps {}
 
 export default Gallery;
