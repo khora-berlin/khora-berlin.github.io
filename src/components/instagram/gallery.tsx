@@ -50,7 +50,7 @@ const Gallery = (props: GalleryProps) => (
 							media_type
 							localImage {
 								childImageSharp {
-									gatsbyImageData(width: 150, height: 150, quality: 85)
+									gatsbyImageData(width: 150, height: 150, placeholder: BLURRED, quality: 85)
 								}
 							}
 						}
