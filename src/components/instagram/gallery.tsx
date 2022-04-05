@@ -3,11 +3,11 @@
  */
 
 import * as React from 'react';
-import { StaticQuery, graphql, useStaticQuery } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import Tooltip from '../tooltip/tooltip';
-import { mixinMediaQuery, MediaContainer } from '../layout/global';
+import { MediaContainer } from '../layout/global';
 
 const InstaGrid = styled.div`
 	@media only screen and (max-width: 500px) {
@@ -33,15 +33,13 @@ const Bottom = styled.div`
 	padding-top: 1em;
 `;
 
-const Gallery = (props: GalleryProps) => (
+const Gallery = () => (
 	<StaticQuery
 		query={graphql`
 			query myQuery {
 				fileName: file(relativePath: { eq: "insta.png" }) {
 					childImageSharp {
-						fluid(maxWidth: 80, maxHeight: 80) {
-							...GatsbyImageSharpFluid
-						}
+						gatsbyImageData(width: 80, height: 80)
 					}
 				}
 				allInstagramContent(filter: { media_type: { eq: "IMAGE" } }) {
@@ -50,11 +48,10 @@ const Gallery = (props: GalleryProps) => (
 							caption
 							media_url
 							media_type
+							id
 							localImage {
 								childImageSharp {
-									fluid(maxHeight: 150, maxWidth: 150, quality: 85) {
-										...GatsbyImageSharpFluid_withWebp
-									}
+									gatsbyImageData(width: 150, height: 150, placeholder: BLURRED, quality: 85)
 								}
 							}
 						}
@@ -70,14 +67,18 @@ const Gallery = (props: GalleryProps) => (
 				<MediaContainer>
 					<InstaGrid>
 						{instaPosts.slice(0, 12).map((post: any) => (
-							<Tooltip html={post.node.caption}>
-								<Img fluid={post.node.localImage.childImageSharp?.fluid} />
+							<Tooltip key={post.node.id} html={post.node.caption}>
+								<GatsbyImage
+									image={post.node.localImage.childImageSharp?.gatsbyImageData}
+									alt="Instagram"
+								/>
 							</Tooltip>
 						))}
 					</InstaGrid>
 					<Bottom>
 						<a href={'https://www.instagram.com/khora.berlin'} target="__blank">
-							more on <br /> <Img fluid={data.fileName.childImageSharp.fluid} alt="Instagram" />
+							more on <br />{' '}
+							<GatsbyImage image={data.fileName.childImageSharp.gatsbyImageData} alt="Instagram" />
 						</a>
 					</Bottom>
 				</MediaContainer>
@@ -85,6 +86,5 @@ const Gallery = (props: GalleryProps) => (
 		}}
 	/>
 );
-interface GalleryProps {}
 
 export default Gallery;
