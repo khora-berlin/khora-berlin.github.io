@@ -48,6 +48,7 @@ const Gallery = () => (
 							caption
 							media_url
 							media_type
+							id
 							localImage {
 								childImageSharp {
 									gatsbyImageData(width: 150, height: 150, placeholder: BLURRED, quality: 85)
@@ -66,7 +67,7 @@ const Gallery = () => (
 				<MediaContainer>
 					<InstaGrid>
 						{instaPosts.slice(0, 12).map((post: any) => (
-							<Tooltip html={post.node.caption}>
+							<Tooltip key={post.node.id} html={post.node.caption}>
 								<GatsbyImage
 									image={post.node.localImage.childImageSharp?.gatsbyImageData}
 									alt="Instagram"
