@@ -8,6 +8,7 @@ export default function Footer() {
 			<Link to="/">HOME</Link>
 			<Link to="/about">ABOUT</Link>
 			<Link to="/contact">CONTACT</Link>
+                        <Link to="/test">TEST</Link>
 		</Menu>
 	);
 }
