@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-markdown-remark-frontmatter-title-tsx",
+    "path": "/test-title/",
+    "result": {"data":{"content":{"frontmatter":{"title":"test title"},"html":"<h1>Hello Khora!</h1>\n<h2>Subtitle</h2>\n<p>Hey :)</p>"}},"pageContext":{"id":"392e0bce-dc59-53ad-8f1a-e5b7815c35e7","frontmatter__title":"test title","__params":{"frontmatter__title":"test-title"}}},
+    "staticQueryHashes": ["3820022524","796763120"]}

@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-markdown-remark-frontmatter-title-tsx",
+    "path": "/message/",
+    "result": {"data":{"content":{"frontmatter":{"title":"Message"},"html":"<p>BE LAZY, SHOW SOLIDARITY.</p>\n<p>ORDER WITH US - YOUR FAVOURITE COURIER COLLECTIVE, KHORA.</p>\n<p>FROM BERLIN, FOR BERLIN.</p>\n<p>FAIR AND WORKER-OWNED.</p>"}},"pageContext":{"id":"3c124f51-8faf-5055-8dbe-3292e1220c62","frontmatter__title":"Message","__params":{"frontmatter__title":"message"}}},
+    "staticQueryHashes": ["3820022524","796763120"]}

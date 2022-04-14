@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-markdown-remark-frontmatter-title-tsx",
+    "path": "/about-short/",
+    "result": {"data":{"content":{"frontmatter":{"title":"aboutShort"},"html":"<p>We’re a group of passionate bike enthusiasts who love to support, engage with, and explore the communities around us. We were all tired of the monopolistic, hierarchical structure typical businesses are run by and figured we could do better.</p>\n<p>Khora is a collective. We have no single owner, no CEO, no managers, no directors.</p>"}},"pageContext":{"id":"fa753191-c0be-539a-b904-292ecf61c044","frontmatter__title":"aboutShort","__params":{"frontmatter__title":"about-short"}}},
+    "staticQueryHashes": ["3820022524","796763120"]}

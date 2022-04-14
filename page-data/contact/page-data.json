@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-markdown-remark-frontmatter-title-tsx",
+    "path": "/contact/",
+    "result": {"data":{"content":{"frontmatter":{"title":"contact"},"html":"<h1>Contact</h1>\n<p>E-MAIL: <a href=\"mailto:service@khora.berlin\">service@khora.berlin</a></p>\n<p>RESTAURANTS: <a href=\"mailto:restaurants@khora.berlin\">restaurants@khora.berlin</a></p>\n<p>COURIERS: <a href=\"mailto:couriers@khora.berlin\">couriers@khora.berlin</a></p>"}},"pageContext":{"id":"d545733b-e281-5060-8fcf-821fae7dde44","frontmatter__title":"contact","__params":{"frontmatter__title":"contact"}}},
+    "staticQueryHashes": ["3820022524","796763120"]}
